@@ -1,5 +1,5 @@
 {
-    "info_email_receiver": "rowejake19@gmail.com",
+    "info_email_receiver": "",
     "send_info": true,
     "email_send_time": 40,
     "take_screenshot": true,
@@ -11,8 +11,8 @@
 
 
 
-    "sender_email_address": "johndoe874123@gmail.com",
-    "sender_email_password": "!@#!@#123123"
+    "sender_email_address": "",
+    "sender_email_password": ""
 
 }
 
