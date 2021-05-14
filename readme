@@ -14,7 +14,17 @@ created by, Jon47
 bitcoin address: 
 bc1qdwcfrgzwdcsn52937nf5f4vwcam9tn89kyye3y
 
+The config information is in 
+the foren6.py in the data
 
+
+---info-------------------------------------------
+This is a forensics program. Maede to be 
+downloaded onto a device(windows computer) 
+to get information.The program has multiple 
+ways of getting info including a keylogger, 
+screenshots and system/wifi information including 
+wifi passwords/ 
 
 ----------------------------------------------
 all the timing in the config file are in seconds.
@@ -34,3 +44,21 @@ sender_email_password should be a burner account that you
 will not care if it is lost. For the burner account(sender_email_address)
 needs to have to let less secure apps access your account.
 
+
+convert to exe file
+---------------------------------------------
+step 1:  download pyinstaller using the command
+
+pip install pyinstaller
+
+step 2: Go into the directory where the foren6.py file is. 
+
+step 3: open the file in powershell
+
+step 4: type this command
+pyinstaller --onefile -w 'foren6.py'
+enter
+
+open the dist file and there you go
+ ---------------------------
+send the .exe file to the target.
