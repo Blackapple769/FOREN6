@@ -47,6 +47,7 @@ pip install pynput==1.6.8
 pip install smtplib
 pip install pyautogui
 pip install requests
+
 ------convert to exe file---------------------------------------
 step 1:  download pyinstaller using the command
 pip install pyinstaller
