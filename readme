@@ -26,22 +26,28 @@ wifi passwords/
 ----------------------------------------------
 all the timing in the config file are in seconds.
 recomended to have over 60 seconds on the screenshots.
----------------------------------------------------
-IMPORTANT!!!
+
+------------IMPORTANT!!!---------------------------------------
 Jon47 does not condone any malicious action carried out 
 using this program it is for educational purposes 
 and should NOT be used to carry out attacks on machines you 
 do not have explicit permission to get access.
----------------------------------------------------------
-VERY VERY IMPORTANT!!!!!!!
+
+-----------VERY VERY IMPORTANT!!!!!!!----------------------------------------------
 The info_email_receiver can be any email this is the 
 email you will receive the information. The sender_email_address 
 sender_email_password should be a burner account that you 
 will not care if it is lost. For the burner account(sender_email_address)
 needs to have to let less secure apps access your account.
--------------------------------------------------------
-convert to exe file
----------------------------------------------
+
+---------requirments--------- 
+python3 added to path
+pip install emails
+pip install pynput==1.6.8 
+pip install smtplib
+pip install pyautogui
+pip install requests
+------convert to exe file---------------------------------------
 step 1:  download pyinstaller using the command
 pip install pyinstaller
 -------------------------------------------
