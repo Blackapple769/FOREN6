@@ -20,6 +20,7 @@ system = platform.system()
 #edit what you want 
 #require email info
 #recomend email send over 60 seconds same with screenshot 
+
 data = {    
     "info_email_receiver": "",
     "send_info": True,
