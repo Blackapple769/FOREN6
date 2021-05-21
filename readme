@@ -40,7 +40,7 @@ sender_email_password should be a burner account that you
 will not care if it is lost. For the burner account(sender_email_address)
 needs to have to let less secure apps access your account.
 
----------requirments--------- 
+---if-the-build.py-doesnt-work-here-are-the-requirments--------- 
 python3 added to path
 pip install emails
 pip install pynput==1.6.8 
