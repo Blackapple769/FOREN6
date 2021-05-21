@@ -23,10 +23,8 @@ if system == "Windows":
     os.system("pip install -U nuitka")
     print("Downloaded all dependencies.")
     print("Creating executable...")
-    ic = input("Do you want to use an application icon? (y/n): ")
-    if ic == "y" or ic == "Y":
-        icon = input("Icon Location: ")
-        os.system(f"nuitka --mingw64 --windows-disable-console --icon={icon} foren6.py")
-    elif ic == "n" or ic == "N":
-        os.system(f"nuitka --mingw64 --windows-disable-console foren6.py")
+    os.system(f"nuitka --mingw64 --windows-disable-console foren6.py")
+
+
+    input("Finished!!!")
 
