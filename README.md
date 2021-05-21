@@ -53,7 +53,7 @@ If you are building FOREN6 from source, you will need to ensure Python 3 is adde
 - requests
 - nuitka
 - secure-smtplib
-
+- pillow 
 To convert to an EXE file, run the following in your terminal:
 
 `nuitka --mingw64 --windows-disable-console foren6.py`
