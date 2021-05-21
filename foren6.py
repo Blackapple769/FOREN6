@@ -175,7 +175,7 @@ def system_info():
         system_info_file.write(str(str(info)+"\n"))
 
 
-if system == "Linux" or system == "Windows":
+if system == "Windows":
 
    
     
@@ -209,4 +209,4 @@ if system == "Linux" or system == "Windows":
 
         
 else:
-    print("Only Linux and Windows machines are permitted!")
+    print("Only Windows machines are permitted!")

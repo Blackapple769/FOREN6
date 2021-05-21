@@ -49,10 +49,10 @@ If you are building FOREN6 from source, you will need to ensure Python 3 is adde
 
 - emails
 - pyinput==1.6.8
-- smtplib
 - pyautogui
 - requests
 - nuitka
+- secure-smtplib
 
 To convert to an EXE file, run the following in your terminal:
 

