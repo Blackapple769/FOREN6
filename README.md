@@ -58,5 +58,5 @@ To convert to an EXE file, run the following in your terminal:
 
 `nuitka --mingw64 --windows-disable-console foren6.py`
 
-If you want to set a file icon, include the `--icon=app.ico` argument.
+
 
