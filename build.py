@@ -17,11 +17,11 @@ def readConfigurationFile():
 	except:
 		# Create a default configuration file
 		config['general'] = {}
-		config['general']['send_info'] = True
-		config['general']['take_screenshot'] = True
-		config['general']['enable_key_logger'] = True
-		config['general']['get_wifi_info'] = True
-		config['general']['get_system_info'] = True
+		config['general']['send_info'] = 'True'
+		config['general']['take_screenshot'] = 'True'
+		config['general']['enable_key_logger'] = 'True'
+		config['general']['get_wifi_info'] = 'True'
+		config['general']['get_system_info'] = 'True'
 
 		config['cooldown'] = {}
 		config['cooldown']['email_send_time'] = '120'
