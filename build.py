@@ -86,7 +86,7 @@ if system == "Windows":
 
 			if not foundOldContents:
 				print(line)
-
+        
 	print("Building FOREN6...")
 	print("Downloading dependencies...")
 	print("Downloading emails...")
@@ -114,3 +114,7 @@ if system == "Windows":
 			os.remove(os.getcwd() + "/foren6.exe")
 	os.system(f"nuitka --mingw64 --windows-disable-console build/foren6_1.py")
 	os.rename(os.getcwd() + "/foren6_1.exe", os.getcwd() + "/foren6.exe") # Rename file
+  
+  input("Build complete!")
+else:
+    input("Can only build for Windows machines!")
