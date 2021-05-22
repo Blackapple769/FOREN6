@@ -31,4 +31,6 @@ if system == "Windows":
 
 
     input("Finished!!!")
+else:
+    input("Only windows machines are permited!!!")
 
