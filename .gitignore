@@ -1,1 +1,7 @@
 .vscode
+python39.dll
+foren6.exe
+build
+*.build
+config.ini
+foren6
