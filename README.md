@@ -58,5 +58,8 @@ To convert to an EXE file, run the following in your terminal:
 
 `nuitka --mingw64 --windows-disable-console foren6.py`
 
-
+## HELP
+To create the `foren6.exe` file you first have to run the `build.py` file.
+once you have done that edit the `config.ini` to what you want. 
+run it again boom you're done. Send the `foren6.exe` file to target.
 
