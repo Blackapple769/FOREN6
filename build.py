@@ -112,10 +112,13 @@ if system == "Windows":
 	os.system("pip install pillow")
 	print("Downloaded all dependencies.")
 	print("Creating executable...")
-	if os.path.exists(os.getcwd() + "/foren6.exe"): # Delete existing executables
-			os.remove(os.getcwd() + "/foren6.exe")
-	os.system(f"nuitka --mingw64 --windows-disable-console build/foren6_1.py")
-	os.rename(os.getcwd() + "/foren6_1.exe", os.getcwd() + "/foren6.exe") # Rename file
+	try:
+		if os.path.exists(os.getcwd() + "/foren6.exe"): # Delete existing executables
+				os.remove(os.getcwd() + "/foren6.exe")
+		os.system(f"nuitka --mingw64 --windows-disable-console build/foren6_1.py")
+		os.rename(os.getcwd() + "/foren6_1.exe", os.getcwd() + "/foren6.exe") # Rename file
+	except:
+		pass
 	input("Build complete!")
 else:
     input("Can only build for Windows machines!")
